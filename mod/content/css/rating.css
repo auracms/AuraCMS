@@ -1,0 +1,144 @@
+/*  styles for the unit rater
+--------------------------------------------------------- 
+ryan masuga, masugadesign.com
+ryan@masugadesign.com 
+Licensed under a Creative Commons Attribution 3.0 License.
+http://creativecommons.org/licenses/by/3.0/
+See readme.txt for full credit details.
+--------------------------------------------------------- */
+
+.ratingblock {
+	display:block;
+	border-bottom:1px solid #999;
+	padding-bottom:8px;
+	margin-bottom:8px;
+	font-size:11px;
+	}
+
+.loading {
+	height: 15px;
+	background: url('../images/working.gif') 50% 50% no-repeat;
+	}
+	
+.unit-rating { /* the UL */
+	list-style:none;
+	margin: 0px;
+	padding:0px;
+	height: 15px;
+	position: relative;
+	background: url('../images/starrating.gif') top left repeat-x;
+	font-size:11px;	
+	}
+
+.unit-rating li{
+    text-indent: -90000px;
+    font-size:11px;	
+    font-size:11px;
+	padding:0px;
+	margin:0px;
+	/*\*/
+	float: left;
+	/* */
+	}
+	
+.unit-rating li a {
+	outline: none;
+	display:block;
+	width:15px;
+	height: 15px;
+	font-size:11px;
+	text-decoration: none;
+	text-indent: -9000px;
+	z-index: 20;
+	position: absolute;
+	padding: 0px;
+	font-size:11px;	
+	}
+	
+.unit-rating li a:hover{
+	background: url('../images/starrating.gif') left center;
+	font-size:11px;	
+	z-index: 2;
+	left: 0px;
+	}
+
+.unit-rating a.r1-unit{left: 0px;}
+.unit-rating a.r1-unit:hover{width:15px;}
+.unit-rating a.r2-unit{left:15px;}
+.unit-rating a.r2-unit:hover{width: 30px;}
+.unit-rating a.r3-unit{left: 30px;}
+.unit-rating a.r3-unit:hover{width: 45px;}
+.unit-rating a.r4-unit{left: 45px;}	
+.unit-rating a.r4-unit:hover{width: 60px;}
+.unit-rating a.r5-unit{left: 60px;}
+.unit-rating a.r5-unit:hover{width: 75px;}
+.unit-rating a.r6-unit{left: 75px;}
+.unit-rating a.r6-unit:hover{width: 90px;}
+.unit-rating a.r7-unit{left: 90px;}
+.unit-rating a.r7-unit:hover{width: 105px;}
+.unit-rating a.r8-unit{left: 105px;}
+.unit-rating a.r8-unit:hover{width: 120px;}
+.unit-rating a.r9-unit{left: 120px;}
+.unit-rating a.r9-unit:hover{width: 135px;}
+.unit-rating a.r10-unit{left: 135px;}
+.unit-rating a.r10-unit:hover{width: 150px;}
+
+.unit-rating li.current-rating {
+	background: url('../images/starrating.gif') left bottom;
+	position: absolute;
+	height: 15px;
+	font-size:11px;
+	display: block;
+	text-indent: -9000px;
+	z-index: 1;
+	}
+
+.voted {color:#999;}
+.thanks {color:#36AA3D;}
+.static {color:#5D3126;}	
+
+.tabs {
+	width: 100%;
+	height: 31px;
+	margin-bottom: 0px;
+}
+.tabs a {
+	float: left;
+	display: block;
+	padding: 6px 15px 7px 15px;
+	margin-right: 2px;
+	border-top: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	background: #FFFFFF url('../images/tab_3.png') repeat-x;
+	color: #000000;
+	font-weight: bold;
+	font-size: 13px;
+	text-decoration: none;
+	z-index: 1;
+	position: relative;
+	top: 1px;
+}
+.tabs a.selected {
+	background: #FFFFFF url('../images/tab_3.png') repeat-x;
+	border-bottom: 0px;
+	padding-bottom: 8px;
+	z-index: 3;
+}
+.tab_page {
+	border: 1px solid #DDDDDD;
+	background: #FFFFFF;
+	padding: 10px;
+	display: block;
+	z-index: 2;
+	margin-bottom: 10px;
+}	
+
+.middle {
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	background: #FFFFFF;
+	padding: 10px 10px 1px 10px;
+	min-height: 30px;
+}

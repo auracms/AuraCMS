@@ -1,0 +1,53 @@
+RewriteEngine On
+
+RewriteBase /auracmsv3
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+
+RewriteRule ^.*$ - [S=84]
+RewriteRule ^index.html$ ./index.php [QSA,L]
+RewriteRule ^logout.html$ ./?action=logout [QSA,L]
+RewriteRule ^login.html$ ./login.php [QSA,L]
+RewriteRule ^article-(.*).html$ ./index.php?mod=content&action=view&seftitle=$1 [QSA,L]
+RewriteRule ^pages-(.*).html$ ./index.php?mod=content&action=view&seftitle=$1 [QSA,L]
+RewriteRule ^article.html$ ./index.php?mod=content [QSA,L]
+
+RewriteRule ^category-(.*)-([0-9]{1,})-([0-9]{1,})-([0-9]{1,}).html$ ./index.php?mod=content&action=category&seftitle=$1&pg=$2&stg=$3&offset=$4 [QSA,L]
+RewriteRule ^category-(.*).html$ ./index.php?mod=content&action=category&seftitle=$1 [QSA,L]
+
+RewriteRule ^arsip-(.*)-([0-9]{1,})-([0-9]{1,})-([0-9]{1,}).html$ ./index.php?mod=content&action=arsip&seftitle=$1&pg=$2&stg=$3&offset=$4 [QSA,L]
+RewriteRule ^arsip-(.*).html ./index.php?mod=content&action=arsip&seftitle=$1 [QSA,L]
+
+RewriteRule ^search-(.*)-([0-9]{1,})-([0-9]{1,})-([0-9]{1,}).html$ ./index.php?mod=content&action=search&search=$1&pg=$2&stg=$3&offset=$4 [QSA,L]
+RewriteRule ^search.html ./index.php?mod=content&action=search [QSA,L]
+
+RewriteRule ^contact.html$ ./index.php?mod=contact [QSA,L]
+
+RewriteRule ^video-([0-9]{1,})-([0-9]{1,})-([0-9]{1,}).html$ ./index.php?mod=video&pg=$1&stg=$2&offset=$3 [QSA,L]
+RewriteRule ^video-(.*).html ./index.php?mod=video&action=view&seftitle=$1 [QSA,L]
+RewriteRule ^video.html ./index.php?mod=video [QSA,L]
+
+RewriteRule ^guestbook-([0-9]{1,})-([0-9]{1,})-([0-9]{1,}).html$ ./index.php?mod=guestbook&pg=$1&stg=$2&offset=$3 [QSA,L]
+RewriteRule ^guestbook-add.html ./index.php?mod=guestbook&action=add [QSA,L]
+RewriteRule ^guestbook.html ./index.php?mod=guestbook [QSA,L]
+
+RewriteRule ^gallery-([0-9]{1,})-([0-9]{1,})-([0-9]{1,}).html$ ./index.php?mod=gallery&pg=$1&stg=$2&offset=$3 [QSA,L]
+RewriteRule ^gallery-detail-(.*)-([0-9]{1,})-([0-9]{1,})-([0-9]{1,}).html ./index.php?mod=gallery&action=detail&seftitle=$1&pg=$2&stg=$3&offset=$4 [QSA,L]
+RewriteRule ^gallery-detail-(.*).html ./index.php?mod=gallery&action=detail&seftitle=$1 [QSA,L]
+RewriteRule ^gallery.html ./index.php?mod=gallery [QSA,L]
+
+RewriteRule ^polling.html$ ./index.php?mod=polling [QSA,L]
+
+RewriteRule ^album-([0-9]{1,})-(.*).html$ ./index.php?pilih=photo&mod=yes&aksi=photo&kid=$1 [QSA,L]
+RewriteRule ^photo-([0-9]{1,})-([0-9]{1,})-(.*).html$ ./index.php?pilih=photo&mod=yes&aksi=detail&id=$1&kid=$2 [QSA,L]
+RewriteRule ^weblinks-([0-9]{1,})-([0-9]{1,})-([0-9]{1,}).html$ ./index.php?mod=weblinks&pg=$1&stg=$2&offset=$3 [QSA,L]
+RewriteRule ^weblinks-(.*)-([0-9]{1,})-([0-9]{1,})-([0-9]{1,}).html$ ./index.php?mod=weblinks&action=detail&seftitle=$1&pg=$2&stg=$3&offset=$4 [QSA,L]
+RewriteRule ^weblinks-jump-(.*).html ./links_jump.php?seftitle=$1 [QSA,L]
+RewriteRule ^weblinks-(.*).html ./index.php?mod=weblinks&action=detail&seftitle=$1 [QSA,L]
+RewriteRule ^weblinks.html ./index.php?mod=weblinks [QSA,L]
+
+RewriteRule ^download-([0-9]{1,})-([0-9]{1,})-([0-9]{1,}).html$ ./index.php?mod=download&pg=$1&stg=$2&offset=$3 [QSA,L]
+RewriteRule ^download-detail-(.*)-([0-9]{1,})-([0-9]{1,})-([0-9]{1,}).html$ ./index.php?mod=download&action=detail&seftitle=$1&pg=$2&stg=$3&offset=$4 [QSA,L]
+RewriteRule ^download-detail-(.*).html ./index.php?mod=download&action=detail&seftitle=$1 [QSA,L]
+RewriteRule ^download-jump-(.*).html ./dl_jump.php?seftitle=$1 [QSA,L]
+RewriteRule ^download.html ./index.php?mod=download [QSA,L]

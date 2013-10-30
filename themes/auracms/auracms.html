@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<title>{judul_situs}</title>
+<meta name="description" content="{meta_description}" />
+<meta name="keywords" content="{meta_keywords}" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="distribution" content="Global" />
+<meta name="author" content="{meta_author}" />
+<meta name="robots" content="index,follow" />
+<link rel="shortcut icon" href="{url}/themes/auracms/images/favicon.png" >
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="rss.php" />
+<link rel="stylesheet" href="{url}/themes/auracms/css/auracms.css" type="text/css" />
+<link rel="stylesheet" href="{url}/themes/auracms/css/slider.css" type="text/css" />
+{style_include}
+{script_include}
+</head>
+
+<body>
+<div id="topbar"> 
+<div id="topbardalam"> 
+<ul id="navlist"> 
+   <li><a href="http://www.sumberhosting.co.id/members/register.php">Daftar</a></li> 
+   <li><a href="http://www.sumberhosting.co.id/members/clientarea.php">Login</a></li> 
+  </ul> 
+<a href="http://www.sumberhosting.co.id"><div id="logo"></div></a> 
+</div> 
+</div>
+<!-- wrap starts here -->
+<div id="headerluar">
+	<div id="header">  
+		<div id="logo"><img src="{url}/themes/auracms/images/logo-properti-cantik.png"></div>
+		<div id="topads"><a target="_blank" href="http://www.teamworks.co.id"><img height="60" border="0" width="468" src="http://www.supporterindonesia.com/files/468x60px.gif"/></a></div>  
+	</div>
+</div>
+
+<div id="topmenuluar">
+<div id="topmenu">
+<div id="topmenu">
+{topmenu}
+</div>
+</div>
+</div>
+ 
+<!-- content-wrap starts here -->
+<div id="wrap">
+ 
+<div id="slider">
+{slider}
+</div>
+
+<div id="rightbar">
+{rightside}
+</div>
+
+<div id="sidebar">
+{leftside}
+</div>
+
+<div id="main"> 
+{content}
+</div>  
+
+<div id="stop">
+</div>
+<!-- content-wrap ends here -->  
+</div>
+
+<!-- footer starts here --> 
+<div id="footerluar">
+<div id="footer">
+<div class="footer-center">
+<p align="center">   
+<b>Tempat Tinggal :</b>
+ <a href="#">Rumah</a> | <a href="#">Apartemen</a> | <a href="#">Kondominium</a> | <a href="#">Tanah</a> | <a href="#">Villa</a> &#8226; 
+<b>Komersial :</b> <a href="#">Ruko</a> | <a href="#">Perkantoran</a> | <a href="#">Pabrik</a> | <a href="#">Gudang</a> | <a href="#">Ruang Usaha</a></p>
+</div>
+
+<div class="footer-left">
+<p align="left">  
+Hak Cipta &copy; 2012 Properti Cantik. Semua Hak Dilindungi.&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" title="Terms of Use">Ketentuan Penggunaan</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Kebijakan Privasi</a><br>
+<a href="http://www.auracms.com/">PropertiCantik.com</a> - <strong>Situs Properti Terlengkap di Indonesia</strong>
+</p>  
+</div>
+
+<div class="footer-right">
+<p align="right">   
+<a href="http://www.teamworks.co.id" target="_blank"><img src="{url}/themes/auracms/images/logoteamworks.png" border="0"/></a>
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+featuredcontentslider.init({
+	id: "slider1",  //id of main slider DIV
+	contentsource: ["inline", ""],  //Valid values: ["inline", ""] or ["ajax", "path_to_file"]
+	toc: "#increment",  //Valid values: "#increment", "markup", ["label1", "label2", etc]
+	nextprev: ["Previous", "Next"],  //labels for "prev" and "next" links. Set to "" to hide.
+	revealtype: "click", //Behavior of pagination links to reveal the slides: "click" or "mouseover"
+	enablefade: [true, 0.1],  //[true/false, fadedegree]
+	autorotate: [true, 3000],  //[true/false, pausetime]
+	onChange: function(previndex, curindex){  //event handler fired whenever script changes slide
+		//previndex holds index of last slide viewed b4 current (1=1st slide, 2nd=2nd etc)
+		//curindex holds index of currently shown slide (1=1st slide, 2nd=2nd etc)
+	}
+})
+</script>
+<script type="text/javascript">
+featuredcontentslider.init({
+	id: "slider2",  //id of main slider DIV
+	contentsource: ["inline", ""],  //Valid values: ["inline", ""] or ["ajax", "path_to_file"]
+	toc: "markup",  //Valid values: "#increment", "markup", ["label1", "label2", etc]
+	nextprev: ["Previous", "Next"],  //labels for "prev" and "next" links. Set to "" to hide.
+	revealtype: "click", //Behavior of pagination links to reveal the slides: "click" or "mouseover"
+	enablefade: [true, 0.2],  //[true/false, fadedegree]
+	autorotate: [false, 3000],  //[true/false, pausetime]
+	onChange: function(previndex, curindex){  //event handler fired whenever script changes slide
+		//previndex holds index of last slide viewed b4 current (1=1st slide, 2nd=2nd etc)
+		//curindex holds index of currently shown slide (1=1st slide, 2nd=2nd etc)
+	}
+})

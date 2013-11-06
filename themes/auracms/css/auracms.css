@@ -184,7 +184,7 @@ form.searchform input.button {
 	border-right	: 0px solid #DFDFDF;
 	width			: 936px; 
 	height			: 100%;
-	margin			: 135px auto 0px auto;	
+	margin			: 0 auto 0 auto;	
 	text-align		: left;
 }
 
@@ -756,7 +756,7 @@ color:#bbb !important;
 /* Topbar Fixed */
 #topbar {
     width               : 100%; 
-    position            : fixed;
+
     top                 : 0px;
     left                : 0px;
     z-index             : 99999;

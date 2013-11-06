@@ -31,12 +31,12 @@
 	
 	$tengah  ='
 	<h2>Web Links</h2>
-	<div class="border" style="text-align:center;"><img src="mod/weblinks/images/weblinks.png" alt="Web Links" /></div>
-	<div class="border breadcrumb"><a href="weblinks.html" id="home">Home</a>   &nbsp;&raquo;&nbsp;   Weblinks</div>';
+	<div class="border" style="text-align:center;"><img src="mod/weblinks/images/weblinks.png" alt="Web Links" /></div>';
 	
 	if($_GET['action'] == ''){
-	
 		
+		$tengah .= '<div class="border breadcrumb"><a href="weblinks.html" id="home">Home</a>   &nbsp;&raquo;&nbsp;   Weblinks</div>';
+
 		$aa 	= $db->sql_query("SELECT * FROM `mod_weblinks_cat`  ORDER BY `title` DESC");
 		$jumlah = $db->sql_numrows($aa);
 		$limit 	= 10;

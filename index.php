@@ -32,21 +32,23 @@
 	@header("Content-type: text/html; charset=utf-8;");
 	ob_start("ob_gzhandler");
 	
-	
-	
-	if (file_exists("install.php")){
-		header ("location:install.php");
-	}
-	
 	define('INDEX', true);
-	include INC . 'conection.php';
-	include INC . 'mysql.php';
-	include INC . 'global.php';
-	include INC . 'phpmailerautoload.php';
-	include INC . 'fungsi.php';
-	include INC . 'template.php';
-	include INC . 'admin.lib.php';
-	include INC . 'json.php';
+	
+	if (!file_exists("includes/connection.php")){
+		require_once ('installer/install.php');
+		die();
+	}else{	
+	
+		include INC . 'connection.php';
+		include INC . 'mysql.php';
+		include INC . 'global.php';
+		include INC . 'phpmailerautoload.php';
+		include INC . 'fungsi.php';
+		include INC . 'template.php';
+		include INC . 'admin.lib.php';
+		include INC . 'json.php';
+	
+	}
 	
 	
 	if (!defined('THEMES')) {

@@ -162,7 +162,7 @@ else // Resize the image based on height
       $new_image = imagecreatetruecolor($width, $height);
       imagecopyresampled($new_image, $this->image, 0, 0, 0, 0, $width, $height, $this->getWidth(), $this->getHeight());
       $this->image = $new_image;   
-  		}  
+  	  }  
    }     
    
    function resizeCrop($width,$height,$ratio = '2:3',$useSharp = false) {
@@ -210,7 +210,6 @@ if (!function_exists( 'image_ratio' ) ){
 
 if (!function_exists( 'image_scale' ) ){
 	function image_scale ($file,$scale,$save){
-		global $image;
 		global $image;
 		$image = new SimpleImage();
 	   	$image->load($file);

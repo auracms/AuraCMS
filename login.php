@@ -33,13 +33,9 @@
 	ob_start("ob_gzhandler");
 	
 	
-	
-	if (file_exists("install.php")){
-		header ("location:install.php");
-	}
-	
+
 	define('INDEX', true);
-	include INC . 'conection.php';
+	include INC . 'connection.php';
 	include INC . 'mysql.php';
 	include INC . 'global.php';
 	include INC . 'fungsi.php';

@@ -35,7 +35,7 @@
 	
 	
 	define('ADMIN', true);
-	include INC . 'conection.php';
+	include INC . 'connection.php';
 	include INC . 'mysql.php';
 	include INC . 'global.php';
 	include INC . 'fungsi.php';

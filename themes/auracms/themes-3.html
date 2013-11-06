@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> 
+<head> 
+<title>{meta_title}</title> 
+<meta name="description" content="{meta_description}" /> 
+<meta name="keywords" content="{meta_keywords}" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="distribution" content="Global" /> 
+<meta name="author" content="{meta_author}" /> 
+<meta name="robots" content="index,follow" /> 
+<link rel="shortcut icon" href="{url}/themes/auracms/images/favicon.png" > 
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="rss.php" /> 
+<link rel="stylesheet" href="{url}/themes/auracms/css/auracms.css" type="text/css" /> 
+<script src="themes/auracms/js/jquery-1.7.1.min.js"></script>
+<link href="themes/auracms/css/flexslider.css" rel="stylesheet">  
+<!-- ///////////////////////////////// Dropdown ///////////////////////////////////// --> 
+<link rel="stylesheet" href="{url}/themes/auracms/css/dropdown.css" type="text/css" /> 
+<script type="text/javascript" src="{url}/themes/auracms/js/dropdown.js"></script> 
+<!-- ///////////////////////////////// End Dropdown ///////////////////////////////////// --> 
+ 
+{style_include}
+{script_include}
+</head> 
+ 
+<body> 
+<!-- wrap starts here --> 
+<div id="topbar">
+	<div id="inner">
+		<div id="headerluar"> 
+			<div id="header">  
+				<div id="logo"><img src="{url}/themes/auracms/images/logo.png"></div>  
+			</div> 
+			</div> 
+			 
+			<div id="topmenuluar"> 
+				<div id="topmenu"> 
+					{menuatas}
+					<script type="text/javascript">
+						var menu=new menu.dd("menu");
+						menu.init("menu","menuhover");
+					</script> 
+				</div> 
+			</div> 
+		</div> 
+	</div>
+</div> 
+<!-- content-wrap starts here --> 
+<div id="clear"></div> 
+
+<div id="wrap"> 
+	<div id="slider">
+	{slider}
+	</div>
+	<div id="rightbar"> 
+	{rightside}
+	</div>
+	<div id="sidebar"> 
+		{leftside}
+	</div>
+	<div id="main"> 
+	{content}
+	</div>   
+ 
+	<div id="clear"></div> 
+	<!-- content-wrap ends here -->  
+</div> 
+ 
+<!-- footer starts here --> 
+<div id="footerluar"> 
+<div id="footer"> 
+	<div class="footer-center"> 
+		<p align="center">   
+			<a href="#">Menu 1</a> | <a href="#">Menu 2</a> | <a href="#">Menu 3</a> | <a href="#">Menu 4</a> | <a href="#">Menu 5</a> | <a href="#">Menu 6</a> | <a href="#">Menu 7</a> | <a href="#">Menu 8</a> | <a href="#">Menu 9</a>
+		</p> 
+	</div> 
+ 
+	<div class="footer-left"> 
+		<p align="left">  
+			Hak Cipta &copy; 2013 AuraCMS. Semua Hak Dilindungi.&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" title="Terms of Use">Ketentuan Penggunaan</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Kebijakan Privasi</a><br> 
+			<a href="http://www.auracms.org/">AuraCMS</a> - <strong>Indonesia Content Management System</strong> 
+		</p>  
+	</div> 
+	 
+	<div class="footer-right"> 
+		<p align="right">   
+			<a href="http://www.panturahost.co.id" target="_blank"><img src="{url}/themes/auracms/images/panturahost.png" border="0"/></a> 
+		</p>
+	</div>  
+</div> 
+</div>
+
+<script src="themes/auracms/js/jquery.flexslider-min.js"></script>
+<script src="themes/auracms/js/custom.js"></script>
+</body> 
+</html> 

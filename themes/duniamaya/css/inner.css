@@ -1,0 +1,84 @@
+/* 
+
+Hosting Square - CSS File
+
+USE THIS STYLE SHEET FOR INNER PAGE
+
+*/
+.page-title{margin-bottom:0px;}
+.breadcrumb{font-size:11px; margin-bottom:10px;}
+.breadcrumb a, .breadcrumb a:visited{color:#acacac;}
+.breadcrumb a#home, a#home:visited{color:#e99719;}
+
+/* PACKAGES */
+#box-plan{width:970px; float:left;}
+#box-plan ul.list li{list-style-type:none; margin:0; padding:0 0 0 20px; background-image:url(../images/list.png); background-repeat:no-repeat; background-position:left center; list-style-position:outside}
+
+#box-plan .title-plan{text-align:center; margin-bottom:20px;}
+#box-plan .price{color:#a2a6b0 !important; font-size:64px; line-height:10px;}
+#box-plan .month{color:#a2a6b0 !important; font-size:21px; margin-top:-10px !important}
+
+#box-plan .one_fourth{
+	-moz-border-radius: 5px; /* Firefox */
+	-webkit-border-radius: 5px; /* Safari, Chrome */
+	border-radius: 5px; /* CSS3 */
+	border:solid 1px #d3d8e0;
+	padding:30px 30px 30px 30px;
+	margin-bottom:10px;
+	margin-right:10px;
+	width:173px;
+}
+
+*+html #box-plan{margin-bottom:10px;}
+*+html #box-plan .one_fourth{width:17.78%; margin-bottom:20px; margin-right:11px;}
+
+/* SERVICES */
+#box-services .one_half{
+	-moz-border-radius: 5px; /* Firefox */
+	-webkit-border-radius: 5px; /* Safari, Chrome */
+	border-radius: 5px; /* CSS3 */
+	border:solid 1px #d3d8e0;
+	padding:30px 30px 30px 30px;
+	margin-bottom:10px;
+	margin-right:10px;
+	width:40.61%;
+}
+
+.icon-title{vertical-align:middle; margin-right:10px}
+
+/* CONTACT */
+form{margin:0; padding:0;}
+fieldset{border:0px;}
+#contact_form{margin:0 auto; position:relative;}
+#contact_form label{display:block}
+label.sp { width:3px;}
+span.error{color:red;text-align:left; font-size:11px;}
+
+#message{ margin-left:0px;}
+#message h2	{}
+#message p{margin:6px 0px; }
+
+input.text-input{ margin:4px 8px 4px 0px; width: 280px; height:15px; padding:5px 2px; border:solid 1px #d3d8e0; vertical-align:middle; background-color:#fdfdfd;}
+textarea.text-input{ margin:0px 8px 4px 0px; padding: 5px 2px; border:solid 1px #d3d8e0; vertical-align:top; width:380px; background-color:#fdfdfd;}
+#contact_form input:focus, #contact_form textarea:focus {border:solid 1px #bfc9da }
+#contact_form input.but{
+font-family:Arial;
+font-size:12px !important;
+border:0px;
+padding-bottom:4px;
+background-image:url(../images/but-submit.gif);
+background-repeat:no-repeat;
+width:76px;
+height:30px;
+color:#323945;
+margin-top:10px;
+cursor:pointer;
+}
+.contact-text{width:245px; float:left;}
+.contact-text a, .contact-text a:visited{color:#e99719 !important;}
+.dot{float:left; width:2px;}
+.righttext{float:left; width:178px; text-align:right}
+.lefttext{float:left; width:65px;}
+* html #contact_form input.but{padding:6px 6px !important;}/* ie 6 only */
+*+html #contact_form input.but{padding:6px 6px !important;}/* ie 7 only */
+

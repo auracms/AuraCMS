@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Script-Type" content="text/javascript" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<meta name="title" content="" />
+<meta name="Description" content="{meta_description}" />
+<meta name="Keywords" content="{meta_keywords}" />
+<title>{meta_title}</title>
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link href="themes/duniamaya/css/import-style-login.php" rel="stylesheet" media="screen" type="text/css" />
+<link rel="stylesheet" href="themes/duniamaya/css/smoothness/jquery-ui-1.8.16.custom.css">
+<script type="text/javascript" src="themes/duniamaya/js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="themes/duniamaya/js/jquery.uniform.js"></script>
+<script type="text/javascript" src="themes/duniamaya/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="themes/duniamaya/js/jquery-ui-1.8.16.custom.min.js"></script>
+<script>
+	$(function() {
+		var icons = {
+			header: "ui-icon-circle-arrow-e",
+			headerSelected: "ui-icon-circle-arrow-s"
+		};
+		$( "#accordion" ).accordion({
+			autoHeight: false,
+			icons: icons,
+			cookie: true
+		});	
+		
+		$("input, textarea, select").uniform();	
+		
+		$( "#tabs" ).tabs({
+			cookie: {
+				expires: 1
+			}
+		});
+		
+	});
+</script>
+<!--[if IE]>
+<script type="text/JavaScript" src="themes/duniamaya/js/cornerz.js"></script>
+<script type="text/JavaScript">
+$(document).ready(function() {
+
+ 	$('#lfooter').cornerz({
+	  corners : "bl br",
+      radius: 5
+     })
+      
+     $('#navtop').cornerz({
+	  corners : "tl tr",
+      radius: 5
+     })
+})
+</script>
+<![endif]-->
+
+<!--[if IE 6]>
+<script src="themes/duniamaya/js/DD_belatedPNG.js"></script>
+<script>
+  /* EXAMPLE */
+  DD_belatedPNG.fix('.png_bg');
+  
+  /* string argument can be any CSS selector */
+  /* .png_bg example is unnecessary */
+  /* change it to what suits you! */
+</script>
+<![endif]--> 
+
+<!--[if lt IE 7.]>
+<script defer type="text/javascript" src="themes/duniamaya/js/pngfix.js"></script>
+<![endif]-->
+<script src="themes/duniamaya/js/cufon-yui.js" type="text/javascript"></script>
+<script src="themes/duniamaya/js/droid-sans.cufonfonts.js" type="text/javascript"></script>
+<script type="text/javascript">
+	Cufon.replace('h2', { fontFamily: 'Droid Sans', hover: true });
+	Cufon.replace('h4', { fontFamily: 'Droid Sans', hover: true });
+</script>
+<meta charset="UTF-8"></head>
+<body>
+
+	<div id="wrapper-top">
+		<div id="container-top">
+			<div id="top">
+				
+			</div><!-- end #top -->
+			<div id="navtop">
+			<ul id="topnav">
+				{menuatas}
+			</ul>
+			</div>
+
+			<div id="main">
+				<div id="content">						
+					{content}	
+				</div><!-- end #mainleft -->				
+				<div class="clear"></div><!-- clear float -->
+			</div><!-- end #main -->
+		</div><!-- end #container-top -->
+	</div><!-- end #wrapper-top -->
+	
+	<div id="wrapper-bottom">
+		<div id="container-bottom">
+			<div id="footer" class="rb">
+				
+						
+				<div class="clear"></div><!-- clear float -->				
+			</div><!-- end #main -->
+			<div id="footer-bottom">
+							
+		  	</div>
+
+		</div><!-- end #container-top -->
+	</div><!-- end #wrapper-top -->
+
+	
+	
+</body>
+</html>

@@ -34,7 +34,7 @@ if (isset($_SESSION['level']) &&  $_SESSION['level'] == 'administrator'){
 
 //config (if your TinyMCE location is different from example, you should also check paths at line ~360)
 $file_root = 'files'; 		//where to store files, must be created and writable
-$root_path = '/auracmsv3';  					//path from webroot, without trailing slash. If your page is located in http://www.example.com/john/, this should be '/john'
+$root_path = '/auracmsv3';  					//jika di upload di server maka cukup di tulis '' saja.
 $thmb_size = 100;       	//max size of preview thumbnail
 $no_script = false;       //true/false - turns scripts into text files
 $lang = 'en';           	//language (look in /plugin/mfm_013/mfm/lang/ for available)

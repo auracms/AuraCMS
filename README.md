@@ -1,8 +1,7 @@
-AuraCMS v2.3 (http://auracms.org)
-Indonesia Content Management System
-============
+#[AuraCMS v2.3](http://auracms.org)
+###Indonesia Content Management System
 
-(http://panturahost.co.id/images/logo.png)
+![Pantura Hosting!](http://panturahost.co.id/images/logo.png)
 
 Saran dan Kritik serta informasi bug sangat kami harapkan dari anda para pemakai AuraCMS ini kirimkan ke :
 
@@ -16,4 +15,4 @@ Saran dan Kritik serta informasi bug sangat kami harapkan dari anda para pemakai
 	 3. Arif Supriyanto
    		arif@ayo.kliksini.com
 		
-Supported By : Pantura Hosting(http://panturahost.co.id) ( http://panturahost.co.id )
+Supported By : Pantura Hosting ( http://panturahost.co.id )

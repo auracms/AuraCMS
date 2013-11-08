@@ -3,7 +3,7 @@
 	
 	
 	include '../../includes/session.php';
-	include '../../includes/conection.php';
+	include '../../includes/connection.php';
 	include '../../includes/mysql.php';
 	include '../../includes/global.php';
 	include '../../includes/fungsi.php';

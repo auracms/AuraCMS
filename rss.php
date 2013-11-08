@@ -9,7 +9,10 @@
 	ob_start();
 	header("content-type: text/xml; charset=utf-8");
 	
-	include 'includes/conection.php';
+	include 'includes/connection.php';
+	include 'includes/mysql.php';
+	include 'includes/global.php';
+	include 'includes/fungsi.php';
 	include 'includes/feedcreator.class.php'; 
 	
 	global $db;

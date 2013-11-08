@@ -14,14 +14,14 @@ Indonesia Content Management System
 
 NB : Saran dan Kritik serta informasi bug sangat kami harapkan dari anda para pemakai AuraCMS ini kirimkan ke :
 
-     1. Arif Supriyanto
-   		arif@ayo.kliksini.com
-
-	 2. Iwan Susyanto, S.Si
+     1. Iwan Susyanto, S.Si
    		admin@auracms.org
    		081 327 575 145 (Telp ya Jgn SMS)
 
-	 3. Rumi Ridwan Sholeh
+	 2. Rumi Ridwan Sholeh
    		floodbost@yahoo.com
+		
+	 3. Arif Supriyanto
+   		arif@ayo.kliksini.com
 		
 Supported By : Pantura Hosting ( http://panturahost.co.id )

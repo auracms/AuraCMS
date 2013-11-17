@@ -166,7 +166,7 @@ js;
 							$success = $db->sql_query("INSERT INTO `mod_gallery` (`images`,`album_id`,`caption`,`tanggal`,`published`) VALUES ('$finame','$album_id','$keterangan','$tanggal','1')");
 							if($success){
 								$tengah .= '<div class="success">Gallery Photo Has Been Added in Database</div>';
-								$style_include[] = '<meta http-equiv="refresh" gallery="0; url=admin.php?mod=gallery" />';
+								$style_include[] = '<meta http-equiv="refresh" content="0; url=admin.php?mod=gallery" />';
 								unset($album_id);
 								unset($keterangan);
 								unlink(tmp . $finame);
@@ -260,7 +260,7 @@ js;
 						if($error){
 							$tengah .= '<div class="error rt" style="margin-bottom:15px;padding-left:50px;">'.$error.'</div>';
 						}else{	
-							$success = $db->sql_query("INSERT INTO `mod_gallery_album` (`album`,`tanggal`,`seftitle`) VALUES ('$album','$tanggal','$seftitle')");
+							$success = $db->sql_query("INSERT INTO `mod_gallery_album` (`album`,`tanggal`,`seftitle`,`published`) VALUES ('$album','$tanggal','$seftitle','1')");
 							if($success){
 								$tengah .= '<div class="success rt" style="margin-bottom:15px;padding-left:50px;">Nama Album Has Been Added in Database</div>';
 								header("location: admin.php?mod=gallery");
@@ -540,8 +540,8 @@ js;
 		
 		$tengah .= '
 		<div class="box">
-		<h2 class="widget-staff">Edit <span class="styled1">Nama Album</span></h2>
-		<div class="breadcrumb"><a href="admin.php?mod=staff" id="home">Home</a>   &nbsp;&raquo;&nbsp;   Edit Nama Album</div>
+		<h2 class="widget-gallery">Edit <span class="styled1">Nama Album</span></h2>
+		<div class="breadcrumb"><a href="admin.php?mod=gallery" id="home">Home</a>   &nbsp;&raquo;&nbsp;   Edit Nama Album</div>
 		</div>';
 		
 		if(isset($_POST['submit'])){

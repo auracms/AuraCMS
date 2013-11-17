@@ -72,7 +72,7 @@
 		0 = false
 		E_ALL = true
 	*/
-	error_reporting(E_ALL);
+	error_reporting(0);
 	
 	define('FUNCTION', true);
 
@@ -80,6 +80,8 @@
     \$mysql_host		= '$mysql_host';
     \$mysql_user		= '$mysql_user';
     \$mysql_password	= '$mysql_password';
+	
+	date_default_timezone_set("Asia/Jakarta"); 
 
 ?>");
 		

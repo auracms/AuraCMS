@@ -81,7 +81,12 @@
     \$mysql_user		= '$mysql_user';
     \$mysql_password	= '$mysql_password';
 	
-	date_default_timezone_set("Asia/Jakarta"); 
+	 
+	
+	if( ! ini_get('date.timezone') )
+	{
+	   date_default_timezone_set(\"Asia/Jakarta\");
+	}
 
 ?>");
 		

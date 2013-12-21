@@ -31,6 +31,14 @@
 		}		
 	}
 	
+	function url(){
+		$url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . '/index.php';	
+		if( $url = explode('/index.php', $url) ) 
+			$url = $url[0];
+			
+		return $url;
+	}
+	
 	if(isset($_POST['step_1']) AND empty($_SESSION['mysql_host'])){
 		$mysql_host 	= $_POST['mysql_host'];
 		$mysql_user		= $_POST['mysql_user'];
@@ -108,10 +116,11 @@
 		
 		$username 	= $_POST['username'];
 		$email		= $_POST['email'];
+		$url		= $_POST['url'];
 		$title		= $_POST['title'];
 		$password	= $_POST['password'];
 		
-		if(!empty($title) or !empty($username) or !empty($email) or !empty($password)){		
+		if(!empty($title) or !empty($username) or !empty($email) or !empty($password) or !empty($url)){		
 			if(preg_match('/^.+@.+\\..+$/',$email)){
 				require('includes/_connection.php');
 				require('includes/mysql.php');
@@ -121,7 +130,7 @@
 				if($insert){
 					$_SESSION['username'] = '';
 					$_SESSION['success']  = '1';
-					$db->sql_query("UPDATE `mod_setting` SET `title`='$title' WHERE `id`='1'"); 
+					$db->sql_query("UPDATE `mod_setting` SET `title`='$title',`url`='$url' WHERE `id`='1'"); 
 				
 				}else{
 					echo '<div class="errorfly go-front" id="status">'.mysql_error().' !</div>';
@@ -193,6 +202,7 @@
 			<fieldset class="step">
 				<legend>Website Configuration</legend>
 				<p><label>Site Name *</label><input name="title" type="text" value="'.$title.'"></p>
+				<p><label>Site Url *</label><input name="url" type="text" value="'.$url.'"></p>
                 <p><label>User Name *</label><input autocomplete="off" value="'.$username.'" name="username" type="text" ></p>
                 <p><label>Password *</label><input  autocomplete="off" value="'.$password.'" name="password" type="password"></p>
                 <p><label>Email *</label><input value="'.$email.'" name="email" type="text"></p>

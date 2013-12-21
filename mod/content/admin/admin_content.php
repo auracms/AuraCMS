@@ -491,6 +491,7 @@ js;
 			$content 		= $_POST['content'];
 			$tags 			= text_filter($_POST['tags']);
 			$date 			= date('Y-m-d H:i:s');
+			$headline 		= int_filter($_POST['headline']);
 			$seftitle		= seo($title);
 			$username		= $_SESSION['username'];
 			$gambarlama		= text_filter($_POST['gambarlama']);

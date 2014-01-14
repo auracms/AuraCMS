@@ -88,7 +88,7 @@ if (!defined('INDEX')) {
 		<h2>Pencarian Berita</h2>
 		<div class="border" style="text-align:center;"><img src="mod/content/images/banner_searching_data.gif" alt="Searching Data" /></div>';
 		
-		$search	= !isset($_GET['search']) ? cleanText($_POST['search']) : cleanText($_GET['search']);
+		$search	= !isset($_GET['search']) ? mysqli_real_escape_string(cleanText($_POST['search'])) : mysqli_real_escape_string(cleanText($_GET['search']));
 		
 		if(!$search){
 			$tengah .= '<div class="error">Maaf Anda Belum Memasukkan Kata Pencarian</div>';

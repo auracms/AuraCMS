@@ -8,6 +8,35 @@
 	
 	global $db,$url,$kecamatan_id,$all_visitors;
 	include 'mod/statistik/counter.php';
+	
+	function validip($ip) {
+		if (!empty($ip) && $ip == long2ip(ip2long($ip))) {
+			$reserved_ips = array(
+				array('0.0.0.0', '0.255.255.255'),
+				array('10.0.0.0', '10.255.255.255'),
+				array('100.64.0.0', '100.127.255.255'),
+				array('127.0.0.0', '127.255.255.255'),
+				array('169.254.0.0', '169.254.255.255'),
+				array('172.16.0.0', '172.31.255.255'),
+				array('192.0.2.0', '192.0.2.255'),
+				array('192.88.99.0', '192.88.99.255'),
+				array('192.168.0.0', '192.168.255.255'),
+				array('198.18.0.0', '198.19.255.255'),
+				array('198.51.100.0', '198.51.100.255'),
+				array('203.0.113.0', '203.0.113.255'),
+				array('255.255.255.0', '255.255.255.255')
+			);
+			foreach ($reserved_ips as $r) {
+				$min = ip2long($r[0]);
+				$max = ip2long($r[1]);
+				if ((ip2long($ip) >= $min) && (ip2long($ip) <= $max)) return false;
+			}
+			return true;
+		}else{
+			return false;
+		}
+	}
+		
 
 	class usersOnline {
 
@@ -24,25 +53,25 @@
 			$this->count_users();
 		}
 		
+	
 		function ipCheck() {
-
-			if (getenv('HTTP_CLIENT_IP')) {
-				$ip = getenv('HTTP_CLIENT_IP');
-			}
-			elseif (getenv('HTTP_X_FORWARDED_FOR')) {
-				$ip = getenv('HTTP_X_FORWARDED_FOR');
-			}
-			elseif (getenv('HTTP_X_FORWARDED')) {
-				$ip = getenv('HTTP_X_FORWARDED');
-			}
-			elseif (getenv('HTTP_FORWARDED_FOR')) {
-				$ip = getenv('HTTP_FORWARDED_FOR');
-			}
-			elseif (getenv('HTTP_FORWARDED')) {
-				$ip = getenv('HTTP_FORWARDED');
-			}
-			else {
-				$ip = $_SERVER['REMOTE_ADDR'];
+			$ip = '';
+			if (isset($_SERVER)) {
+				if (!empty($_SERVER['HTTP_CLIENT_IP']) && validip($_SERVER['HTTP_CLIENT_IP'])) {
+					$ip = $_SERVER['HTTP_CLIENT_IP'];
+				}else if (!empty($_SERVER['HTTP_X_FORWARDED_FOR']) && validip($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+					$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+				}else{
+					$ip = $_SERVER['REMOTE_ADDR'];
+				}
+			}else{
+				if (getenv('HTTP_CLIENT_IP') && validip(getenv('HTTP_CLIENT_IP'))) {
+					$ip = getenv('HTTP_CLIENT_IP');
+				}else if (getenv('HTTP_X_FORWARDED_FOR') && validip(getenv('HTTP_X_FORWARDED_FOR'))) {
+					$ip = getenv('HTTP_X_FORWARDED_FOR');
+				}else{
+					$ip = getenv('REMOTE_ADDR');
+				}
 			}
 			return $ip;
 		}

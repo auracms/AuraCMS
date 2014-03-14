@@ -9,8 +9,8 @@
 		while($data = $db->sql_fetchrow($query)){
 			$slider .= '
 			<li>
-				<a href=""><img src="images/normal/'.$data['image'].'" width="597" height="230" alt="'.$data['title'].'" /></a>
-				<p class="flex-caption"><a href=""><h3>'.$data['title'].'</h3><p>'.limittxt($data['content'],250).'</p></a></p>
+				<a href="article-'.$data['seftitle'].'.html"><img src="images/normal/'.$data['image'].'" width="597" height="230" alt="'.$data['title'].'" /></a>
+				<p class="flex-caption"><a href="article-'.$data['seftitle'].'.html"><h3>'.$data['title'].'</h3><p>'.limittxt($data['content'],250).'</p></a></p>
 			</li>';	
 		}
 	$slider .= '

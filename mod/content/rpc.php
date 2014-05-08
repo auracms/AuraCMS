@@ -4,7 +4,7 @@
 header("Cache-Control: no-cache");
 header("Pragma: nocache");
 
-include '../../includes/conection.php';
+include '../../includes/connection.php';
 include '../../includes/mysql.php';
 include '../../includes/global.php';
 include '../../includes/fungsi.php';

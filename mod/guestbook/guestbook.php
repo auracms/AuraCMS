@@ -54,11 +54,11 @@
 	if($_GET['action'] == 'add'){
 		
 		if(isset($_POST['submit'])){
-			$name		= text_filter($_POST['name']);
-			$email		= text_filter($_POST['email']);
-			$website	= text_filter($_POST['website']);
-			$city		= text_filter($_POST['city']);
-			$comment	= text_filter($_POST['comment']);
+			$name		= xss_clean(text_filter($_POST['name']));
+			$email		= xss_clean(text_filter($_POST['email']));
+			$website	= xss_clean(text_filter($_POST['website']));
+			$city		= xss_clean(text_filter($_POST['city']));
+			$comment	= xss_clean(text_filter($_POST['comment']));
 			$gfx_check	= text_filter($_POST['gfx_check']);
 			$date 		= date('Y-m-d H:i:s');
 			$ip 		= getIP();
@@ -77,9 +77,9 @@
 				$tengah .= '<div class="error">'.$error.'</div>';
 				unset($gfx_check);
 			}else{
-				$name 	 = mysql_real_escape_string($_POST['name']);
-				$city 	 = mysql_real_escape_string($_POST['city']);
-				$comment = mysql_real_escape_string($_POST['comment']);
+				$name 	 = mysql_real_escape_string($name);
+				$city 	 = mysql_real_escape_string($city);
+				$comment = mysql_real_escape_string($comment);
 				$insert = $db->sql_query("INSERT INTO `mod_guestbook` (`name`,`email`,`website`,`ip`,`city`,`date`,`comment`) VALUE ('$name','$email','$website','$ip','$city','$date','$comment')");
 				if($insert){
 					$tengah .= '<div class="sukses">Data has been Save</div>';

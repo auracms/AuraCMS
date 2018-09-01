@@ -195,7 +195,16 @@
 		<div class="breadcrumb"><a href="admin.php?mod=users#users-1" id="home">Home</a>   &nbsp;&raquo;&nbsp;   Edit User</div>
 		</div>
 		<div class="border">
-			<form method="post" action="?mod=users" enctype ="multipart/form-data"><table style="font-family:Verdana;font-size:12px;"><tr><td style="padding-right:10px;width:70px;">Pencarian</td><td> :</td><td style="padding-left:5px;padding-top:1px;"><input type="text" name="search" size="50" placeholder="Masukkan Nama, Email atau Username" /></td><td><button type="submit" class="primary"><span class="icon plus"></span>Search</button></td></tr></table></form>
+			<form method="post" action="?mod=users" enctype ="multipart/form-data">
+			<table style="font-family:Verdana;font-size:12px;">
+				<tr>
+					<td style="padding-right:10px;width:70px;">Pencarian</td>
+					<td> :</td>
+					<td style="padding-left:5px;padding-top:1px;"><input type="text" name="search" size="50" placeholder="Masukkan Nama, Email atau Username" /></td>
+					<td><button type="submit" class="primary"><span class="icon plus"></span>Search</button></td>
+				</tr>
+			</table>
+			</form>
 		</div>';
 				
 		if(isset($_POST['submit'])){
@@ -216,7 +225,7 @@
 			}else{	
 				$password	= md5($username.$password);
 
-				$success = $db->sql_query("UPDATE `mod_user` SET `username`='$username', `password`='$password',`name`='$name',`email`='$email' WHERE `id`='$id'");
+				$success = $db->sql_query("UPDATE `mod_user` SET `username`='$username', `password`='$password',`name`='$name',`email`='$email' WHERE `id`='$id' AND `id`!='1'");
 
 				if($success){
 					$tengah .= '<div class="success">User Has Been Update</div>';
@@ -228,7 +237,8 @@
 			}
 					
 		}
-		$data = $db->sql_fetchrow($db->sql_query("SELECT * FROM `mod_user` WHERE `id`='$id'"));
+		$data = $db->sql_fetchrow($db->sql_query("SELECT * FROM `mod_user` WHERE `id`='$id' AND `id`!='1'"));
+		
 		$username 	= $data['username'];
 		$email 		= $data['email'];
 		$name 		= $data['name'];
@@ -271,12 +281,12 @@
 	if ($_GET['action'] == 'pub'){	
 		if ($_GET['pub'] == 'no'){	
 			$id = int_filter ($_GET['id']);	
-			$db->sql_query ("UPDATE `mod_user` SET `active`='0' WHERE `id`='$id'");		
+			$db->sql_query ("UPDATE `mod_user` SET `active`='0' WHERE `id`='$id' AND `id`!='1'");		
 		}	
 		
 		if ($_GET['pub'] == 'yes'){	
 			$id = int_filter ($_GET['id']);	
-			$db->sql_query ("UPDATE `mod_user` SET `active`='1' WHERE `id`='$id'");		
+			$db->sql_query ("UPDATE `mod_user` SET `active`='1' WHERE `id`='$id' AND `id`!='1'");		
 		}	
 		$referer = $_GET['referer'];
 		header("location: $referer");

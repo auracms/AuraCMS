@@ -73,6 +73,10 @@
 				$error .= 'Anda Telah Memposting, Tunggu beberapa Saat';
 			}
 			
+			if(!((strpos($website, 'http') === 0) && filter_var($website, FILTER_VALIDATE_URL))){
+			    $error .= 'URL is invalid';
+			}
+			
 			if($error){
 				$tengah .= '<div class="error">'.$error.'</div>';
 				unset($gfx_check);
